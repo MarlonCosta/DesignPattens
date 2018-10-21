@@ -2,7 +2,9 @@ package Mediator;
 
 public class Debate {
     public static void main(String[] args) {
-        ApresentadorMediador willianBonner = new ApresentadorMediador("Willian Bonner");
+        int [] tempos = {3, 3, 3, 3}; //Pergunta, Resposta, Réplica, Tréplica
+
+        ApresentadorMediador willianBonner = new ApresentadorMediador("Willian Bonner", tempos);
 
         Candidato ciro = new Candidato("Ciro Gomes");
         Inscrito marlon = new Inscrito("Marlon", ciro);
