@@ -1,7 +1,5 @@
 package Composite;
 
-class Item {
-    double getPrice() {
-        return 0.0;
-    }
+abstract class Item {
+    public abstract double getPrice();
 }
