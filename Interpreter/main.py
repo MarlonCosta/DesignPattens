@@ -175,7 +175,7 @@ class Parser(object):
         return node
 
 
-class node_visitor(object):
+class NodeVisitor(object):
     def visit(self, node, parent=None):
         method_name = 'visit_' + type(node).__name__
         visitor = getattr(self, method_name, self.generic_visit)
@@ -188,7 +188,7 @@ class node_visitor(object):
         raise Exception('Método visit_{} não existe'.format(type(node).__name__))
 
 
-class Interpreter(node_visitor):
+class Interpreter(NodeVisitor):
     def __init__(self, parser):
         self.parser = parser
         self.tree = nx.Graph()
